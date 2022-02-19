@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+
+{% block header %}
+
+  <span style="float:right" class="mb-6 mx-2">
+    <a href="/dashboard">
+      <button class="btn btn-primary btn-md" type="button">Back</button>
+    </a>
+  </span>
+  
+{% endblock header %}
+
+{% block body %}
+
+<div class="card">
+  <div class="card-header">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/static/images/dog_cat_1.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top mx-2">
+            <strong>Animal Predictor</strong>
+        </a>
+        </div>
+    </div>
+  <div class="card-body">
+    <form method="post" action="/animal" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="input-group my-3">
+        <input type="file" class="form-control" name="animal" id="animal">
+        {% comment %} <label class="animal" for="animal">Browse</label> {% endcomment %}
+    </div>
+    <button class="w-30 btn btn-md btn-primary my-2" type="submit">Predict</button>
+    </form>
+  </div>
+</div>
+
+{% endblock body %}

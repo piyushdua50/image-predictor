@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% block header %}
+
+  <span style="float:right" class="mb-6 mx-2">
+    <a href="/dashboard">
+      <button class="btn btn-primary btn-md" type="button">Back</button>
+    </a>
+  </span>
+  
+{% endblock header %}
+
+{% block body %}
+
+<div class="row" style="align-items:center;justify-content:space-evenly">    
+  <div class="col-sm-4">
+    <div class="card border-primary">
+        <a href="/animal">
+            <img src="/media/{{ image_name }}" class="card-img-top" alt="..." width="100" height="250">
+            {% comment %} <img src="{{ image_name }}" class="card-img-top" alt="..." width="100" height="250"> {% endcomment %}
+        </a>
+        <div class="card-body">
+            <h5 class="card-title text-center">This is {{ prediction }}</h5>
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

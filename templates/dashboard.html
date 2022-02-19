@@ -1,0 +1,34 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+<div class="row" style="align-items:center;justify-content:space-evenly">
+    
+  <div class="col-sm-4">
+    <div class="card border-primary">
+        <a href="/animal">
+            <img src="/static/images/dog_cat_1.jpg" class="card-img-top" alt="..." width="100" height="200">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title text-center">Animal Predictor</h5>
+            <p class="card-text">Predict your Image by uploading an image (Cat/Dog) </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card border-primary">
+        <a href="/digit">
+            <img src="/static/images/digit_final.jpeg" class="card-img-top" alt="..." width="100" height="200">
+        </a>
+        <div class="card-body">
+            <h5 class="card-title text-center">Digit Predictor</h5>
+            <p class="card-text">Predict your digit by uploading an image of a digit</p>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock body %}
+
